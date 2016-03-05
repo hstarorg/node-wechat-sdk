@@ -1,0 +1,33 @@
+{
+  "name": "node-wechat-sdk",
+  "version": "0.0.1",
+  "description": "wechat node sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "engines": {
+    "node": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hstarorg/node-wechat-sdk.git"
+  },
+  "keywords": [
+    "wechat",
+    "sdk"
+  ],
+  "author": "Jay.M.Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hstarorg/node-wechat-sdk/issues"
+  },
+  "homepage": "https://github.com/hstarorg/node-wechat-sdk#readme",
+  "dependencies": {
+    "request": "^2.69.0",
+    "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
