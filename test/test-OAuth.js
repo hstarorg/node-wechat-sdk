@@ -2,11 +2,9 @@
 
 var assert = require('assert');
 var OAuth = require('./../lib/OAuth.js');
+var testConfig = require('./test-config');
 
-var appId = 'wx2e23ffad9588c5cd';
-var appSecret = '0097dd0c4dbdcfc5aa1ac7a020ab254e';
-
-var oauth = new OAuth(appId, appSecret);
+var oauth = new OAuth(testConfig.appId, testConfig.appSecret);
 
 describe('Test OAuth function', function () {
   it('Test get access token', function (done) {
