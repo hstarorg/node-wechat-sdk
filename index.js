@@ -1,9 +1,9 @@
 'use strict';
 
+var OAuth = require('./lib/OAuth');
+
 var wechat = {};
 
-wechat.getAccessToken = (appId, appSecret) => {
-  
-};
+wechat.OAuth = OAuth;
 
 module.exports = wechat;
