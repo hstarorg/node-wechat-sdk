@@ -1,23 +1,24 @@
 'use strict';
 
 var assert = require('assert');
-var OAuth = require('./../lib/OAuth.js');
+var OAuthApi = require('./../lib/OAuthApi.js');
 var testConfig = require('./test-config');
 
-var oauth = new OAuth(testConfig.appId, testConfig.appSecret);
+var api = new OAuthApi(testConfig.appId, testConfig.appSecret);
 
 describe('Test OAuth function', function () {
   it('Test get access token', function (done) {
-    oauth.getOAuthToken((err, token) => {
+    api.getOAuthToken((err, token) => {
       assert.equal(null, err);
       assert.notEqual(null, token);
-      assert.equal(true, token === oauth.accessToken);
+      assert.equal(true, token === api.accessToken);
+      console.log(token);
       done();
     });
   });
 
   it('Test get wechat server IPs', function (done) {
-    oauth.getWeChatServerIPs(oauth.accessToken).then((data) => {
+    api.getWeChatServerIPs(api.accessToken).then((data) => {
       assert.equal(true, data.length > 0);
       done();
     })
