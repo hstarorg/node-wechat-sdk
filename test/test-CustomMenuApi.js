@@ -2,9 +2,9 @@
 
 var assert = require('assert');
 var CustomMenuApi = require('./../lib/CustomMenuApi.js');
-var testConfig = require('./test-config');
+// var testConfig = require('./test-config');
 
-var api = new CustomMenuApi(testConfig.accessToken);
+var api = new CustomMenuApi();
 
 describe('Test CustomMenu function', function () {
   it('Test get custom menu', function (done) {
